@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import '../styles/App.css'
+import React from 'react';
+import '../styles/App.css';
+import Menu from './Menu';
 
 function App() {
   return (
     <>
-      <div className='Container'>
-        <h1>Hello World</h1>
-      </div>
+      <Menu />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

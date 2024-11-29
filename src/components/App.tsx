@@ -4,7 +4,9 @@ import '../styles/App.css'
 function App() {
   return (
     <>
-      <h1>Start Line</h1>
+      <div className='Container'>
+        <h1>Hello World</h1>
+      </div>
     </>
   )
 }

@@ -22,24 +22,24 @@ const Menu = () => {
                     title='Ado WORLD TOUR 2025 "Hibana"'
                     description="Powered by Crunchyroll in Seoul"
                     date="2024-11-29"
+                    link="https://google.com"
+                    daysLeft="D-1"
                 />
                 <MenuItem
                     imageSrc="/TestPost_002.png"
                     title='BoyWithUke BURNOUT WORLD TOUR 2025'
                     description="보이위드우크(BoyWithUke) 첫 단독 내한공연"
                     date="2024-11-29"
+                    link="https://google.com"
+                    daysLeft="D-20"
                 />
                 <MenuItem
                     imageSrc="/TestPost_002.png"
-                    title='Ado WORLD TOUR 2025 "Hibana"'
-                    description="Powered by Crunchyroll in Seoul"
+                    title='BoyWithUke BURNOUT WORLD TOUR 2025'
+                    description="보이위드우크(BoyWithUke) 첫 단독 내한공연"
                     date="2024-11-29"
-                />
-                <MenuItem
-                    imageSrc="/TestPost_002.png"
-                    title='Ado WORLD TOUR 2025 "Hibana"'
-                    description="Powered by Crunchyroll in Seoul"
-                    date="2024-11-29"
+                    link="https://google.com"
+                    daysLeft="D-20"
                 />
             </div>
         </>

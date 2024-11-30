@@ -48,7 +48,7 @@
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.2s;
-    font-size: 24px;
+    font-size: 22px;
     color: #FF7700;
 }
 
@@ -63,4 +63,9 @@
 .menu-content {
     overflow-y: auto;
     padding: 20px;
+}
+
+.highlight {
+    background-color: #FF7700;
+    color: #fff;
 }

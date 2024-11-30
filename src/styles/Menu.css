@@ -48,7 +48,7 @@
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 0.2s;
-    font-size: 24px;
+    font-size: 22px;
     color: #FF7700;
 }
 

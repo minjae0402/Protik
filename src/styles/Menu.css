@@ -64,3 +64,8 @@
     overflow-y: auto;
     padding: 20px;
 }
+
+.highlight {
+    background-color: #FF7700;
+    color: #fff;
+}

@@ -4,7 +4,7 @@ import { FaLink } from 'react-icons/fa';
 
 interface MenuItemProps {
     imageSrc: string;
-    title: string;
+    title: React.ReactNode;
     description: string;
     date: string;
     link: string;
@@ -16,10 +16,10 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date,
         <>
             <div className="menu-item">
                 <div className="menu-item-left">
-                    <img src={imageSrc} alt={title} className="menu-item-image" />
+                    <img src={imageSrc} alt={title as string} className="menu-item-image" />
                     <div className='menu-item-link-line'>
                         <FaLink className='menu-item-image-Icon' />
-                        <a href={link} target="_blank" className="menu-item-link">
+                        <a href={link} target="_blank" className="menu-item-link" rel="noreferrer">
                             공식 홈페이지
                         </a>
                     </div>

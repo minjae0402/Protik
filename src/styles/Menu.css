@@ -12,6 +12,7 @@
     text-align: center;
     box-shadow: 0 2px 4px rgba(255, 145, 0, 0.1);
     margin-bottom: 30px;
+    margin-top: 30px;
     border-bottom: 2px solid #FF7700;
     position: sticky;
     top: 0;
@@ -53,12 +54,28 @@
 }
 
 .menu li {
+    position: relative;
     font-size: 16px;
     color: #FF7700;
     font-weight: bold;
     margin: 0 15px;
     cursor: pointer;
     transition: transform 0.2s;
+}
+
+.menu-icon {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+    font-size: 24px;
+    color: #FF7700;
+}
+
+.menu li:hover .menu-icon {
+    opacity: 1;
 }
 
 .menu li:hover {

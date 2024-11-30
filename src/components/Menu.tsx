@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Menu.css';
 import MenuItem from './MenuItem';
+import { FaInfoCircle, FaBook, FaPhone } from 'react-icons/fa';
 
 const Menu = () => {
     const handleButtonClick = () => {
@@ -18,9 +19,18 @@ const Menu = () => {
                     </button>
                     <nav className="menu">
                         <ul>
-                            <li>소개</li>
-                            <li>사용법</li>
-                            <li>문의</li>
+                            <li>
+                                <FaInfoCircle className="menu-icon" />
+                                소개
+                            </li>
+                            <li>
+                                <FaBook className="menu-icon" />
+                                사용법
+                            </li>
+                            <li>
+                                <FaPhone className="menu-icon" />
+                                문의
+                            </li>
                         </ul>
                     </nav>
                 </div>

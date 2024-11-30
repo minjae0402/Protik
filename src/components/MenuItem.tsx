@@ -10,16 +10,19 @@ interface MenuItemProps {
 
 const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date }) => {
     return (
-        <button className="menu-item">
-            <img src={imageSrc} alt={title} className="menu-item-image" />
-            <div className="menu-item-text">
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </div>
-            <div className="menu-item-date">
-                {date}
-            </div>
-        </button>
+        <>
+            <button className="menu-item">
+                <img src={imageSrc} alt={title} className="menu-item-image" />
+                <div className="menu-item-text">
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                </div>
+                <div className="menu-item-date">
+                    {date}
+                </div>
+            </button>
+            <hr />
+        </>
     );
 };
 

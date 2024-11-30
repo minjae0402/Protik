@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -50,4 +50,11 @@
     right: 10px;
     font-size: 16px;
     color: #999;
+}
+
+hr {
+    margin-bottom: 20px;
+    background: #efefef;
+    height: 2px;
+    border: 0;
 }

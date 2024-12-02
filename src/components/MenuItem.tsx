@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/MenuItem.css';
 import { FaLink } from 'react-icons/fa';
 
@@ -12,6 +13,12 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date, link, daysLeft }) => {
+    const navigate = useNavigate();
+
+    const handlePracticeClick = () => {
+        navigate('/practice');
+    };
+
     return (
         <>
             <div className="menu-item">
@@ -35,7 +42,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date,
                     <div className="menu-item-days-left">
                         {daysLeft}
                     </div>
-                    <button className='menu-item-go-practice-btn'>연습하러가기 &gt;</button>
+                    <button className='menu-item-go-practice-btn' onClick={handlePracticeClick}>연습하러가기 &gt;</button>
                 </div>
             </div>
             <hr />

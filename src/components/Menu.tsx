@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
     const menuItems: MenuItemType[] = [
         {
             imageSrc: "/TestPost_001.png",
-            title: 'Ado WORLD TOUR 2025 "Hibana"',
+            title: 'Ado WORLD TOUR 2025 "Hibanas"',
             description: "Powered by Crunchyroll in Seoul",
             date: "2024-11-29",
             link: "https://google.com",

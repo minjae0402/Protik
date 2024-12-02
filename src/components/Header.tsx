@@ -1,5 +1,4 @@
 import '../styles/Header.css';
-import { FaInfoCircle, FaBook, FaPhone } from 'react-icons/fa';
 
 const Header = () => {
     const handleButtonClick = () => {

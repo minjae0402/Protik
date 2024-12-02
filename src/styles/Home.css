@@ -1,0 +1,7 @@
+.menu-container {
+    border-radius: 10px;
+    max-width: 1080px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

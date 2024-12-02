@@ -74,15 +74,21 @@ const Menu: React.FC = () => {
 
             <div className="menu-content">
                 {filteredItems.map((item, index) => (
-                    <MenuItem
-                        key={index}
-                        imageSrc={item.imageSrc}
-                        title={highlightText(item.title, searchTerm)}
-                        description={item.description}
-                        date={item.date}
-                        link={item.link}
-                        daysLeft={item.daysLeft}
-                    />
+                    <>
+                        <MenuItem
+                            key={index}
+                            imageSrc={item.imageSrc}
+                            title={highlightText(item.title, searchTerm)}
+                            description={item.description}
+                            date={item.date}
+                            link={item.link}
+                            daysLeft={item.daysLeft}
+                        />
+
+                        {
+                            index != filteredItems.length - 1 && <hr />
+                        }
+                    </>
                 ))}
             </div>
         </>

@@ -23,7 +23,15 @@ const Menu: React.FC = () => {
             description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
             date: "2024-11-29",
             link: "https://ticket.melon.com/performance/index.htm?prodId=210711",
-            daysLeft: "D-3"
+            daysLeft: "D-day"
+        },
+        {
+            imageSrc: "/TestPost_006.png",
+            title: 'MGA LIVE in SEOUL, KOREA 2025',
+            description: "",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210767",
+            daysLeft: "D-2"
         },
         {
             imageSrc: "/TestPost_001.png",
@@ -31,15 +39,31 @@ const Menu: React.FC = () => {
             description: "Powered by Crunchyroll in Seoul",
             date: "2024-11-29",
             link: "https://google.com",
+            daysLeft: "D-4"
+        },
+        {
+            imageSrc: "/TestPost_003.png",
+            title: '2024 춘베리아 특급열차',
+            description: "이번 열차는 춘베리아, 춘베리아행입니다.",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210752",
             daysLeft: "D-7"
         },
         {
-            imageSrc: "/TestPost_002.png",
-            title: 'BoyWithUke BURNOUT WORLD TOUR 2025',
-            description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
+            imageSrc: "/TestPost_004.png",
+            title: 'meiyo Live in Seoul',
+            description: "뭘 해도 잘 되지 않아",
             date: "2024-11-29",
-            link: "https://google.com",
-            daysLeft: "D-20"
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210703",
+            daysLeft: "D-8"
+        },
+        {
+            imageSrc: "/TestPost_005.png",
+            title: '음율 The 1st Concert 〈환상설화 (幻想說話) GRAND FINALE in Seoul〉',
+            description: "",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210643",
+            daysLeft: "D-10"
         }
     ];
 
@@ -71,6 +95,12 @@ const Menu: React.FC = () => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
             </div>
+
+            {/* <div>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div> */}
 
             <div className="menu-content">
                 {filteredItems.map((item, index) => (

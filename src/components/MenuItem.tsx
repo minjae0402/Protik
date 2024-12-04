@@ -14,7 +14,7 @@ interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date, link, daysLeft }) => {
     const openPopup = () => {
         const url = 'https://celebrated-platypus-1f540d.netlify.app/';
-        const popupName = 'ExamplePopup';
+        const popupName = 'Popup';
         const popupFeatures = 'width=600,height=400';
 
         const newWindow = window.open(url, popupName, popupFeatures);

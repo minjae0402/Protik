@@ -18,20 +18,20 @@ const Menu: React.FC = () => {
 
     const menuItems: MenuItemType[] = [
         {
+            imageSrc: "/TestPost_002.png",
+            title: 'BoyWithUke BURNOUT WORLD TOUR 2025',
+            description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210711",
+            daysLeft: "D-3"
+        },
+        {
             imageSrc: "/TestPost_001.png",
             title: 'Ado WORLD TOUR 2025 "Hibanas"',
             description: "Powered by Crunchyroll in Seoul",
             date: "2024-11-29",
             link: "https://google.com",
-            daysLeft: "D-1"
-        },
-        {
-            imageSrc: "/TestPost_002.png",
-            title: 'BoyWithUke BURNOUT WORLD TOUR 2025',
-            description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
-            date: "2024-11-29",
-            link: "https://google.com",
-            daysLeft: "D-20"
+            daysLeft: "D-7"
         },
         {
             imageSrc: "/TestPost_002.png",

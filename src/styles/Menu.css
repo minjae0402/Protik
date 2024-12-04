@@ -68,6 +68,38 @@
     gap: 20px;
 }
 
+.menu-buttons {
+    display: flex;
+    justify-content: start;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.menu-button {
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #3e3e3e;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
+}
+
+.menu-button img {
+    margin-bottom: 5px;
+    border-radius: 8px;
+    width: 50px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu-button:hover {
+    background-color: #f0f0f0;
+}
+
 .highlight {
     background-color: #FF7700;
     color: #fff;

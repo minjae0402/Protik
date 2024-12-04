@@ -96,13 +96,25 @@ const Menu: React.FC = () => {
                 />
             </div>
 
-            {/* <div>
-                <button></button>
-                <button></button>
-                <button></button>
-            </div> */}
+            <div className="menu-buttons">
+                <button className="menu-button">
+                    <img src="/Melon_Logo.png" />
+                    멜론
+                </button>
+                <button className="menu-button">
+                    <img src="/Interpark_Logo.png" />
+                    인터파크
+                </button>
+                <button className="menu-button">
+                    <img src="/Yes24_Logo.png" />
+                    Yes24
+                </button>
+            </div>
+
+            <hr />
 
             <div className="menu-content">
+
                 {filteredItems.map((item, index) => (
                     <>
                         <MenuItem

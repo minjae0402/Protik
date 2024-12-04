@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/MenuItem.css';
+import { useNavigate } from 'react-router-dom';
 import { FaLink } from 'react-icons/fa';
 
 interface MenuItemProps {
@@ -12,6 +13,12 @@ interface MenuItemProps {
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date, link, daysLeft }) => {
+    const navigate = useNavigate();
+
+    const handlePracticeClick = () => {
+        navigate('/practice');
+    }
+
     const openPopup = () => {
         const url = 'https://celebrated-platypus-1f540d.netlify.app/';
         const popupName = 'Popup';
@@ -51,7 +58,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date,
                             {daysLeft}
                         </div>
                     </div>
-                    <button className='menu-item-go-practice-btn' onClick={openPopup}>연습하러가기 &gt;</button>
+                    <button className='menu-item-go-practice-btn' onClick={handlePracticeClick}>연습하러가기 &gt;</button>
                 </div>
             </div>
         </>

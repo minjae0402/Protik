@@ -5,9 +5,10 @@
     padding: 16px 18px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     /* transition: transform 0.4s, box-shadow 0.4s; */
     position: relative;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.05);
 }
 
 /* .menu-item:hover {
@@ -98,6 +99,11 @@
     font-size: 36px;
     font-weight: bold;
     color: #FF7700;
+}
+
+.menu-item-service-img {
+    width: 30px;
+    height: auto;
 }
 
 .menu-item-go-practice-btn {

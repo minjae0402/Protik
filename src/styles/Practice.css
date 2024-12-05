@@ -20,3 +20,31 @@
     font-size: 14px;
     color: #5c5c5c;
 }
+
+.Bottom-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+}
+
+.Bottom-page-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF7700;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.Bottom-page-container p {
+    color: #525252;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Bottom-page-container button:hover {
+    cursor: pointer;
+}

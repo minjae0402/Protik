@@ -18,14 +18,14 @@ const Practice: React.FC = () => {
     const pageDescriptions = [
         "",
         "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "내용2",
+        "내용3",
+        "내용4",
+        "내용5",
+        "내용6",
+        "내용7",
+        "내용8",
+        "내용9"
     ];
 
     const handleNextPage = () => {
@@ -46,7 +46,7 @@ const Practice: React.FC = () => {
             {page === 1 ? (
                 <div className='intro-content'>
                     <h3>시작하기 전에</h3>
-                    <p>이 튜토리얼은 당신이 이 애플리케이션을 사용하는 데 도움이 될 것입니다. 각 페이지를 주의 깊게 읽고, 모든 단계를 따라 하세요. 준비가 되면 다음 페이지로 이동하세요.</p>
+                    <p>이 튜토리얼을 통해 티켓팅에서의 주의사항과 꿀팁들을 공부하고 연습해보세요!</p>
                 </div>
             ) : (
                 <img src={`/Tutorials/Tutorials_00${page.toString().padStart(0, '0')}.png`} alt={`Tutorial ${page}`} />

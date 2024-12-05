@@ -16,6 +16,8 @@ interface MenuItemType {
 const Menu: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [filteredItems, setFilteredItems] = useState<MenuItemType[]>([]);
+    const [currentPage, setCurrentPage] = useState<number>(1);
+    const itemsPerPage = 5;
 
     const menuItems: MenuItemType[] = [
         {
@@ -71,6 +73,33 @@ const Menu: React.FC = () => {
             link: "https://ticket.melon.com/performance/index.htm?prodId=210643",
             serviceImge: "/Melon_Logo.png",
             daysLeft: "D-10"
+        },
+        {
+            imageSrc: "/TestPost_002.png",
+            title: 'BoyWithUke BURNOUT WORLD TOUR 2025',
+            description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210711",
+            serviceImge: "/Melon_Logo.png",
+            daysLeft: "D-day"
+        },
+        {
+            imageSrc: "/TestPost_002.png",
+            title: 'BoyWithUke BURNOUT WORLD TOUR 2025',
+            description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210711",
+            serviceImge: "/Melon_Logo.png",
+            daysLeft: "D-day"
+        },
+        {
+            imageSrc: "/TestPost_002.png",
+            title: 'BoyWithUke BURNOUT WORLD TOUR 2025',
+            description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
+            date: "2024-11-29",
+            link: "https://ticket.melon.com/performance/index.htm?prodId=210711",
+            serviceImge: "/Melon_Logo.png",
+            daysLeft: "D-day"
         }
     ];
 
@@ -80,6 +109,7 @@ const Menu: React.FC = () => {
                 item.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
         );
+        setCurrentPage(1);
     }, [searchTerm]);
 
     const highlightText = (text: string, highlight: string) => {
@@ -88,6 +118,28 @@ const Menu: React.FC = () => {
         return text.split(regex).map((part, index) =>
             part.toLowerCase() === highlight.toLowerCase() ? <span key={index} className="highlight">{part}</span> : part
         );
+    };
+
+    const handlePageChange = (newPage: number) => {
+        setCurrentPage(newPage);
+        window.scrollTo(0, 0);
+    };
+
+    const indexOfLastItem = currentPage * itemsPerPage;
+    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
+    const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+
+    const renderPagination = () => {
+        return [...Array(totalPages)].map((_, index) => (
+            <button
+                key={index}
+                className={`page-number ${currentPage === index + 1 ? 'active-page' : ''}`}
+                onClick={() => handlePageChange(index + 1)}
+            >
+                {index + 1}
+            </button>
+        ));
     };
 
     return (
@@ -121,26 +173,43 @@ const Menu: React.FC = () => {
             <hr />
 
             <div className="menu-content">
-
-                {filteredItems.map((item, index) => (
-                    <>
-                        <MenuItem
-                            key={index}
-                            imageSrc={item.imageSrc}
-                            title={highlightText(item.title, searchTerm)}
-                            description={item.description}
-                            date={item.date}
-                            link={item.link}
-                            daysLeft={item.daysLeft}
-                            serviceImge={item.serviceImge}
-                        />
-
-                        {
-                            index != filteredItems.length - 1 && <hr />
-                        }
-                    </>
-                ))}
+                {currentItems.length > 0 ? (
+                    currentItems.map((item, index) => (
+                        <React.Fragment key={index}>
+                            <MenuItem
+                                imageSrc={item.imageSrc}
+                                title={highlightText(item.title, searchTerm)}
+                                description={item.description}
+                                date={item.date}
+                                link={item.link}
+                                daysLeft={item.daysLeft}
+                                serviceImge={item.serviceImge}
+                            />
+                            {index !== currentItems.length - 1 && <hr />}
+                        </React.Fragment>
+                    ))
+                ) : (
+                    <div className="no-results">검색 결과가 없습니다.</div>
+                )}
             </div>
+
+            {filteredItems.length > itemsPerPage && (
+                <div className="pagination">
+                    <button
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        disabled={currentPage === 1}
+                    >
+                        &laquo;
+                    </button>
+                    {renderPagination()}
+                    <button
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        disabled={currentPage === Math.ceil(filteredItems.length / itemsPerPage)}
+                    >
+                        &raquo;
+                    </button>
+                </div>
+            )}
         </>
     );
 };

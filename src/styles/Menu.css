@@ -111,3 +111,46 @@ hr {
     height: 1px;
     border: 0;
 }
+
+.no-results {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.pagination button {
+    padding: 4px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.pagination button:hover {
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+.page-number {
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.page-number:hover {
+    background-color: #f0f0f0;
+}
+
+.active-page {
+    color: #FF7700;
+}

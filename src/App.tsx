@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './components/Home';
-import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Practice from './components/Practice';
 
@@ -8,12 +7,10 @@ function App() {
   const location = useLocation();
 
   return (
-    <AnimatePresence>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/practice" element={<Practice />} />
-      </Routes>
-    </AnimatePresence>
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<Home />} />
+      <Route path="/practice" element={<Practice />} />
+    </Routes>
   );
 }
 

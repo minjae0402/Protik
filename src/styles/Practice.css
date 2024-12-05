@@ -6,7 +6,7 @@
 }
 
 .practice-container img {
-    width: 700px;
+    width: 600px;
     height: auto;
 }
 
@@ -18,7 +18,7 @@
 
 .practice-container p {
     font-size: 14px;
-    color: #5c5c5c;
+    color: #2f2f2f;
 }
 
 .Bottom-page-container {
@@ -40,7 +40,7 @@
 }
 
 .Bottom-page-container p {
-    color: #525252;
+    color: #414141;
     font-size: 14px;
     font-weight: bold;
 }

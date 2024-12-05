@@ -20,19 +20,19 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date,
         navigate('/practice');
     }
 
-    const openPopup = () => {
-        const url = 'https://celebrated-platypus-1f540d.netlify.app/';
-        const popupName = 'Popup';
-        const popupFeatures = 'width=600,height=400';
+    // const openPopup = () => {
+    //     const url = 'https://celebrated-platypus-1f540d.netlify.app/';
+    //     const popupName = 'Popup';
+    //     const popupFeatures = 'width=600,height=400';
 
-        const newWindow = window.open(url, popupName, popupFeatures);
+    //     const newWindow = window.open(url, popupName, popupFeatures);
 
-        if (newWindow) {
-            newWindow.focus();
-        } else {
-            alert('팝업이 차단되었습니다. 브라우저 설정을 확인해 주세요.');
-        }
-    };
+    //     if (newWindow) {
+    //         newWindow.focus();
+    //     } else {
+    //         alert('팝업이 차단되었습니다. 브라우저 설정을 확인해 주세요.');
+    //     }
+    // };
 
     return (
         <>

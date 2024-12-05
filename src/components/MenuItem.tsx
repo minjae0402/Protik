@@ -9,10 +9,11 @@ interface MenuItemProps {
     description: string;
     date: string;
     link: string;
+    serviceImge: string;
     daysLeft: string;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date, link, daysLeft }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date, link, daysLeft, serviceImge }) => {
     const navigate = useNavigate();
 
     const handlePracticeClick = () => {
@@ -48,6 +49,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ imageSrc, title, description, date,
                         <h2>{title}</h2>
                         <p>{description}</p>
                     </div>
+                    <img className='menu-item-service-img' src={serviceImge} />
                 </div>
                 <div className="menu-item-right">
                     <div>

@@ -101,6 +101,11 @@
     color: #FF7700;
 }
 
+.menu-item-service-img {
+    width: 30px;
+    height: auto;
+}
+
 .menu-item-go-practice-btn {
     padding: 8px 12px;
     background-color: #ffffff;

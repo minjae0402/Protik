@@ -9,6 +9,7 @@ interface MenuItemType {
     description: string;
     date: string;
     link: string;
+    serviceImge: string;
     daysLeft: string;
 }
 
@@ -23,6 +24,7 @@ const Menu: React.FC = () => {
             description: "보이위드우크(BoyWithUke) 첫 단독 내한공연",
             date: "2024-11-29",
             link: "https://ticket.melon.com/performance/index.htm?prodId=210711",
+            serviceImge: "/Melon_Logo.png",
             daysLeft: "D-day"
         },
         {
@@ -31,6 +33,7 @@ const Menu: React.FC = () => {
             description: "",
             date: "2024-11-29",
             link: "https://ticket.melon.com/performance/index.htm?prodId=210767",
+            serviceImge: "/Melon_Logo.png",
             daysLeft: "D-2"
         },
         {
@@ -39,6 +42,7 @@ const Menu: React.FC = () => {
             description: "Powered by Crunchyroll in Seoul",
             date: "2024-11-29",
             link: "https://google.com",
+            serviceImge: "/Interpark_Logo.png",
             daysLeft: "D-4"
         },
         {
@@ -47,6 +51,7 @@ const Menu: React.FC = () => {
             description: "이번 열차는 춘베리아, 춘베리아행입니다.",
             date: "2024-11-29",
             link: "https://ticket.melon.com/performance/index.htm?prodId=210752",
+            serviceImge: "/Melon_Logo.png",
             daysLeft: "D-7"
         },
         {
@@ -55,6 +60,7 @@ const Menu: React.FC = () => {
             description: "뭘 해도 잘 되지 않아",
             date: "2024-11-29",
             link: "https://ticket.melon.com/performance/index.htm?prodId=210703",
+            serviceImge: "/Melon_Logo.png",
             daysLeft: "D-8"
         },
         {
@@ -63,6 +69,7 @@ const Menu: React.FC = () => {
             description: "",
             date: "2024-11-29",
             link: "https://ticket.melon.com/performance/index.htm?prodId=210643",
+            serviceImge: "/Melon_Logo.png",
             daysLeft: "D-10"
         }
     ];
@@ -125,6 +132,7 @@ const Menu: React.FC = () => {
                             date={item.date}
                             link={item.link}
                             daysLeft={item.daysLeft}
+                            serviceImge={item.serviceImge}
                         />
 
                         {

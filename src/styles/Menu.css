@@ -59,7 +59,7 @@
 .menu-content {
     overflow-y: auto;
     padding-inline: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 
     display: flex;
     flex-direction: column;
@@ -139,6 +139,7 @@ hr {
     background-color: #dbdbdb;
     cursor: pointer;
 }
+
 
 .page-number {
     color: #000;

@@ -84,7 +84,7 @@ const StartPractice = () => {
                     <span>{formatTime(time).hours} 시 {formatTime(time).minutes} 분</span>
                 </div>
             )}
-            <div className='practice-container'>
+            <div className='practice-container-s'>
                 <div className='practice-container-line'>
                     <div className='practice-form-line'></div>
                     <div className='practice-form'>

@@ -6,7 +6,7 @@
 }
 
 .practice-container-line {
-    background-color: f7f7f7;
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,14 +16,14 @@
     gap: 150px;
     background-color: #f7f7f7;
     border-radius: 3px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #e6e6e6;
 }
 
 .practice-form-line {
     padding: 160px;
     width: 800px;
     height: auto;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #e6e6e6;
     background-color: #fff;
     display: flex;
     justify-content: flex-end;
@@ -34,7 +34,7 @@
     width: 800px;
     height: auto;
     background-color: #fff;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid #e6e6e6;
     border-radius: 3px;
     display: flex;
     justify-content: flex-end;
@@ -57,8 +57,9 @@
 .practice-form-p {
     padding: 10px;
     color: rgb(116, 228, 116);
-    margin-right: 270px;
+    margin-right: 200px;
 }
+
 
 
 

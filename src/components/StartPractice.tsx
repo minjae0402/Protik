@@ -80,7 +80,7 @@ const StartPractice = () => {
                         {time && time.getHours() === 12 && time.getMinutes() === 0 ? (
                             <button onClick={openPopup}>예매하기</button>
                         ) : (
-                            <div className='practice-form-p'>20xx.xx.xx(X) 오전 12:00 티켓오픈!</div>
+                            <div className='practice-form-p'>20xx.xx.xx(X) 오전 12:00 티켓오픈! (남은시간 00 분 00 초)</div>
                         )}
                     </div>
                 </div>

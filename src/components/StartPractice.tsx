@@ -3,6 +3,20 @@ import { FaRegClock } from 'react-icons/fa';
 import '../styles/StartPractice.css';
 
 const StartPractice = () => {
+    const openPopup = () => {
+        const url = 'https://celebrated-platypus-1f540d.netlify.app/';
+        const popupName = 'Popup';
+        const popupFeatures = 'width=600,height=400';
+
+        const newWindow = window.open(url, popupName, popupFeatures);
+
+        if (newWindow) {
+            newWindow.focus();
+        } else {
+            alert('팝업이 차단되었습니다. 브라우저 설정을 확인해 주세요.');
+        }
+    };
+
     const [showPopup, setShowPopup] = useState(true);
     const [time, setTime] = useState<Date | null>(null);
     const [intervalId, setIntervalId] = useState<number | null>(null);
@@ -60,7 +74,16 @@ const StartPractice = () => {
                 </div>
             )}
             <div className='practice-container'>
-                <h1>Hello World</h1>
+                <div className='practice-container-line'>
+                    <div className='practice-form-line'></div>
+                    <div className='practice-form'>
+                        {time && time.getHours() === 12 && time.getMinutes() === 0 ? (
+                            <button onClick={openPopup}>예매하기</button>
+                        ) : (
+                            <div className='practice-form-p'>20xx.xx.xx(X) 오전 12:00 티켓오픈!</div>
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     );

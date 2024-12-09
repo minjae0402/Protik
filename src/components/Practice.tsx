@@ -24,7 +24,6 @@ const Practice: React.FC = () => {
         "참사를 막기 위해 키보드 한/영 확인!!",
         "오류를 배제하기 위해 결제는 꼭꼭 무통장으로!",
     ];
-
     const handleNextPage = () => {
         if (page < totalPages) {
             setPage(page + 1);

@@ -20,6 +20,7 @@ const StartPractice = () => {
     const [showPopup, setShowPopup] = useState(true);
     const [time, setTime] = useState<Date | null>(null);
     const [intervalId, setIntervalId] = useState<number | null>(null);
+    const [remainingTime, setRemainingTime] = useState<{ minutes: string, seconds: string }>({ minutes: '00', seconds: '00' });
 
     const handleClosePopup = () => {
         setShowPopup(false);
@@ -33,7 +34,17 @@ const StartPractice = () => {
             }
 
             const id = window.setInterval(() => {
-                setTime(prevTime => new Date((prevTime ? prevTime.getTime() : 0) + 1000));
+                setTime(prevTime => {
+                    const newTime = new Date((prevTime ? prevTime.getTime() : 0) + 1000);
+                    const diff = (new Date().setHours(12, 0, 0, 0) - newTime.getTime()) / 1000;
+                    const minutesLeft = Math.floor(diff / 60).toString().padStart(2, '0');
+                    const secondsLeft = Math.floor(diff % 60).toString().padStart(2, '0');
+                    setRemainingTime({
+                        minutes: minutesLeft,
+                        seconds: secondsLeft
+                    });
+                    return newTime;
+                });
             }, 1000);
             setIntervalId(id);
 
@@ -80,7 +91,7 @@ const StartPractice = () => {
                         {time && time.getHours() === 12 && time.getMinutes() === 0 ? (
                             <button onClick={openPopup}>예매하기</button>
                         ) : (
-                            <div className='practice-form-p'>20xx.xx.xx(X) 오전 12:00 티켓오픈! (남은시간 00 분 00 초)</div>
+                            <div className='practice-form-p'>20xx.xx.xx(X) 오전 12:00 티켓오픈! (남은시간 {remainingTime.minutes} 분 {remainingTime.seconds} 초)</div>
                         )}
                     </div>
                 </div>

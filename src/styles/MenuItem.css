@@ -113,7 +113,7 @@
     color: #FF7700;
     font-weight: bold;
     transition: background-color 0.1s, color 0.1s;
-    border: 1px solid #FF7700;  
+    border: 1px solid #FF7700;
 
     display: flex;
     justify-content: center;

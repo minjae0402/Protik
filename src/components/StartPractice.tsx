@@ -13,7 +13,7 @@ const StartPractice = () => {
     const openPopup = () => {
         const url = 'https://celebrated-platypus-1f540d.netlify.app/';
         const popupName = 'Popup';
-        const popupFeatures = 'width=600,height=400';
+        const popupFeatures = 'width=700,height=500';
 
         const newWindow = window.open(url, popupName, popupFeatures);
 

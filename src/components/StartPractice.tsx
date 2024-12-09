@@ -73,7 +73,7 @@ const StartPractice = () => {
                     }
                     return prevNumber;
                 });
-            }, 2000);
+            }, 1500);
 
             return () => clearInterval(interval);
         }
